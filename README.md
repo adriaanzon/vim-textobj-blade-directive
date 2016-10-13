@@ -4,6 +4,8 @@ vim-textobj-blade-directive
 A text object for Laravel's [Blade](https://laravel.com/docs/master/blade)
 directives.
 
+![Example](https://raw.githubusercontent.com/adriaanzon/assets/master/vim-textobj-blade-directive.gif)
+
 Depends on [vim-textobj-user](https://github.com/kana/vim-textobj-user) and
 [vim-blade](https://github.com/jwalton512/vim-blade).
 
@@ -21,6 +23,26 @@ When textobj-blade-directive is installed you will gain two new text objects,
 which are triggered by `ad` and `id` respectively. These follow Vim convention,
 so that `ad` selects _all_ of a Blade directive, and `id` selects the _inner_
 portion of a Blade directive.
+
+### Tips
+
+In the example GIF, the `@if` statement got surrounded with a `@can` statement.
+This isn't directly related to this plugin, but it was achieved using the
+[vim-surround](https://github.com/tpope/vim-surround) plugin, with the following
+configuration in `after/ftplugin/blade.vim`:
+
+```vim
+" Use 'd' to surround with a Blade directive.
+let b:surround_{char2nr("d")} = "@\1Blade directive: @\1 \r @end\1\r\[( \]\\+.*\r\1"
+" Some aliases for convenience.
+let b:surround_{char2nr("D")} = b:surround_{char2nr("d")}
+let b:surround_{char2nr("@")} = b:surround_{char2nr("d")}
+```
+
+Now you can surround anything with a Blade directive. For example, if you wanted
+to surround a paragraph, you could select the paragraph with `vip`, followed by
+an `S` to activate vim-surround, followed by a `d`. This will open a prompt
+where you may type your blade directive.
 
 ### Limitations
 
