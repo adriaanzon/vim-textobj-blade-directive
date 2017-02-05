@@ -1,4 +1,4 @@
-let s:start_pattern = '\v\@(section\s*\([^,]*|if|unless|foreach|forelse|for|while|push' .
+let s:start_pattern = '\v\@(section\s*\([^,]*\)|if|unless|foreach|forelse|for|while|push' .
       \ '|can|cannot|hasSection|php\s*[^\(]|verbatim|component|slot)'
 let s:end_pattern =  '\v\@(end\w+|stop|show|append|overwrite)'
 let s:skip_pattern = 'synIDattr(synID(line("."), col("."), 0), "name") !=# "bladeKeyword"'
