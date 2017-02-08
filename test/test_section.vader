@@ -1,0 +1,17 @@
+Given blade (Section pair with one-line section directive inside):
+  @section('content')
+    @section('title', 'The Home Page')
+
+    Welcome to my web page
+  @endsection
+
+Execute:
+  set shiftwidth=2
+
+Do (Delete contents of directive pair):
+  jjcidWelcome\<Esc>
+
+Expect blade (It ignores the one-line section directive):
+  @section('content')
+    Welcome
+  @endsection

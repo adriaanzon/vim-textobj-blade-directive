@@ -1,0 +1,11 @@
+Given blade (Directive pair with content):
+  @foreach($dogs as $dog)
+    This dog's name is: {{ $dog->name }}
+  @endforeach
+
+Do (Delete contents of directive pair):
+  did
+
+Expect blade:
+  @foreach($dogs as $dog)
+  @endforeach

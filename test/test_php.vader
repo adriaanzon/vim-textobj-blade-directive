@@ -1,0 +1,15 @@
+Given blade (Pair with one-line php directive inside):
+  @if($condition)
+    @php($foo = 'bar')
+    {{ $foo }}
+  @endif
+
+Execute:
+  set shiftwidth=2
+
+Do (Delete contents of directive pair):
+  did
+
+Expect blade (It ignores the one-line php directive):
+  @if($condition)
+  @endif
