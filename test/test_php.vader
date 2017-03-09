@@ -4,9 +4,6 @@ Given blade (Pair with one-line php directive inside):
     {{ $foo }}
   @endif
 
-Execute:
-  set shiftwidth=2
-
 Do (Delete contents of directive pair):
   did
 

@@ -5,9 +5,6 @@ Given blade (Section pair with one-line section directive inside):
     Welcome to my web page
   @endsection
 
-Execute:
-  set shiftwidth=2
-
 Do (Delete contents of directive pair):
   jjcidWelcome\<Esc>
 
