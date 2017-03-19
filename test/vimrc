@@ -2,7 +2,7 @@ set nocompatible
 
 runtime macros/matchit.vim
 
-let &packpath = expand('<sfile>:p:h')
+let &packpath = expand('<sfile>:p:h:h')
 
 filetype plugin indent on
 syntax on

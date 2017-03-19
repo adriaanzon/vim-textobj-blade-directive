@@ -8,15 +8,15 @@ repos=(
   kana/vim-textobj-user
 )
 
-cd "$(dirname "$0")"
-mkdir -p pack/blade/start
-cd pack/blade/start
+cd "$(dirname "$0")/.."
+mkdir -p pack/testing/start
+cd pack/testing/start
 
 # When adding the plugin manually to &runtimepath, the plugin gets loaded
 # before plugins in the 'pack' directory. Because this plugin depends on
 # functionality from some plugins in the 'pack' directory, we'll add it
 # to the pack like this.
-ln -s ../../../.. vim-textobj-blade-directive
+ln -s ../../.. vim-textobj-blade-directive
 
 for repo in ${repos[@]}
 do
