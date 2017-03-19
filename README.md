@@ -79,5 +79,5 @@ objects.
 License
 -------
 
-Copyright (c) Adriaan Zonnenberg. Distributed under the same terms as Vim
-itself. See `:help license`.
+Copyright © Adriaan Zonnenberg. Distributed under the same terms as Vim itself.
+See `:help license`.

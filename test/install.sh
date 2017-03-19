@@ -3,19 +3,16 @@
 set -e
 
 repos=(
-  junegunn/vader.vim
-  jwalton512/vim-blade
-  kana/vim-textobj-user
+  'junegunn/vader.vim'
+  'jwalton512/vim-blade'
+  'kana/vim-textobj-user'
 )
 
 cd "$(dirname "$0")/.."
 mkdir -p pack/testing/start
 cd pack/testing/start
 
-# When adding the plugin manually to &runtimepath, the plugin gets loaded
-# before plugins in the 'pack' directory. Because this plugin depends on
-# functionality from some plugins in the 'pack' directory, we'll add it
-# to the pack like this.
+# Add our plugin to the pack.
 ln -s ../../.. vim-textobj-blade-directive
 
 for repo in ${repos[@]}
