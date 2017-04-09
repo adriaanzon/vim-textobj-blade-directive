@@ -6,11 +6,22 @@ directives.
 
 ![Example](https://raw.githubusercontent.com/adriaanzon/assets/master/vim-textobj-blade-directive.gif)
 
+Installation
+------------
+
 Depends on [vim-textobj-user](https://github.com/kana/vim-textobj-user) and
 [vim-blade](https://github.com/jwalton512/vim-blade).
 
-Also requires the matchit.vim plugin to be enabled. Ensure that the following
-line is included somewhere in your vimrc file:
+```vim
+Plug 'kana/vim-textobj-user'
+Plug 'jwalton512/vim-blade'
+Plug 'adriaanzon/vim-textobj-blade-directive'
+```
+
+Also requires the matchit.vim plugin to be enabled. You can check if it's
+enabled by running `:echo g:loaded_matchit`, it should return `1`.
+
+If it's not enabled yet, you can do so by putting the following in your vimrc:
 
 ```vim
 runtime macros/matchit.vim
