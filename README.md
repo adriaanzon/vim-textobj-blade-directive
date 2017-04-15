@@ -59,22 +59,22 @@ type your blade directive.
 
 ### Limitations
 
-Operations are done line wise, so this text object doesn't work for statements
-on a single line.
+* Operations are done line wise, so this text object doesn't work for
+  statements on a single line.
 
-Some text objects in Vim respond to a count. For example, the
-<kbd>a</kbd><kbd>{</kbd> text object will select _all_ of the current `{}`
-delimited block, but if you prefix it with the number 2 (e.g.
-<kbd>v</kbd><kbd>2</kbd><kbd>i</kbd><kbd>{</kbd>) then it will select all of
-the block that contains the current block. The Blade directive text object does
-not respond in this way if you prefix a count. This is due to a limitation in
-the [textobj-user plugin](https://github.com/kana/vim-textobj-user).
+* Some text objects in Vim respond to a count. For example, the
+  <kbd>a</kbd><kbd>{</kbd> text object will select _all_ of the current `{}`
+  delimited block, but if you prefix it with the number 2 (e.g.
+  <kbd>v</kbd><kbd>2</kbd><kbd>i</kbd><kbd>{</kbd>) then it will select all of
+  the block that contains the current block. The Blade directive text object
+  does not respond in this way if you prefix a count. This is due to a
+  limitation in the [textobj-user plugin](https://github.com/kana/vim-textobj-user).
 
-However, you can achieve a similar effect by repeating the Blade directive
-text-object manually. So if you press <kbd>v</kbd><kbd>a</kbd><kbd>d</kbd> to
-select the current Blade directive, you can expand your selection outwards by
-repeating <kbd>a</kbd><kbd>d</kbd>, or contract your selection inwards by
-repeating <kbd>i</kbd><kbd>d</kbd>.
+  However, you can achieve a similar effect by repeating the Blade directive
+  text-object manually. So if you press <kbd>v</kbd><kbd>a</kbd><kbd>d</kbd> to
+  select the current Blade directive, you can expand your selection outwards by
+  repeating <kbd>a</kbd><kbd>d</kbd>, or contract your selection inwards by
+  repeating <kbd>i</kbd><kbd>d</kbd>.
 
 Credits
 -------
